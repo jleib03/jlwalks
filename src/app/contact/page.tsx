@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
@@ -123,24 +124,11 @@ export default function ContactPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {/*
-                    FORM PLACEHOLDER
-                    This container is ready for CRM form injection.
-                    Target this element with your form builder using the ID below.
-                  */}
-                  <div
-                    id="jlwalks-contact-form"
-                    className="min-h-[400px] border-2 border-dashed border-muted-foreground/20 rounded-lg flex items-center justify-center p-8"
-                  >
-                    <div className="text-center text-muted-foreground">
-                      <p className="text-sm font-medium mb-2">Form Placeholder</p>
-                      <p className="text-xs">
-                        Contact form will be injected here via CRM integration.
-                        <br />
-                        Target ID: <code className="bg-muted px-1 rounded">#jlwalks-contact-form</code>
-                      </p>
-                    </div>
-                  </div>
+                  <div id="critter-form" className="min-h-[400px]"></div>
+                  <Script
+                    src="https://v0-petcare-crm-git-campaign-enhancements-critter-projects.vercel.app/api/embed/forms/contact-us-form"
+                    strategy="lazyOnload"
+                  />
                 </CardContent>
               </Card>
             </div>
