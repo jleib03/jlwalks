@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description:
     "Professional dog walking, adventure walks, and drop-in visits. Keeping your furry friends happy, healthy, and exercised.",
   keywords: ["dog walking", "pet care", "adventure walks", "drop-in visits"],
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
